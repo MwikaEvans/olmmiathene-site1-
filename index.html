@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Our Lady of Mercy Miathene Parish</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital@1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary:#004A99;
+  --secondary:#2E7D32;
+  --accent:#FFD700;
+  --bg:#F0F4F0;
+  --surface:#FFFFFF;
+  --text:#1A1A2E;
+  --muted:#5A5A6A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  font-family:'Outfit', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAV */
+nav {
+  background:var(--primary);
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  flex-wrap:wrap;
+}
+
+nav .logo {
+  font-family:'Cinzel';
+  font-size:18px;
+}
+
+nav .links {
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav .give {
+  background:var(--accent);
+  color:#000;
+  padding:8px 14px;
+  border-radius:5px;
+  font-weight:500;
+}
+
+/* HERO */
+.hero {
+  background:linear-gradient(rgba(0,74,153,0.85), rgba(0,74,153,0.85)),
+  url('https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=1200');
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  color:white;
+  padding:80px 20px;
+}
+
+.hero img {
+  width:110px;
+  margin-bottom:15px;
+}
+
+.hero h1 {
+  font-family:'Cinzel';
+  font-size:38px;
+  margin:10px 0;
+}
+
+.hero .sub {
+  font-family:'EB Garamond';
+  font-style:italic;
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+.hero .cta {
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn {
+  padding:12px 20px;
+  border-radius:5px;
+  text-decoration:none;
+  font-weight:500;
+  font-size:14px;
+}
+
+.btn-primary {
+  background:var(--accent);
+  color:#000;
+}
+
+.btn-outline {
+  border:1px solid white;
+  color:white;
+}
+
+/* SECTIONS */
+.section {
+  max-width:1000px;
+  margin:50px auto;
+  padding:0 20px;
+}
+
+.section h2 {
+  font-family:'Cinzel';
+  color:var(--primary);
+  margin-bottom:20px;
+}
+
+/* CARDS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:var(--surface);
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top:0;
+}
+
+/* SCRIPTURE */
+.scripture {
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+  font-family:'EB Garamond';
+  font-style:italic;
+  font-size:22px;
+}
+
+/* FOOTER */
+.footer {
+  background:var(--primary);
+  color:white;
+  padding:30px 20px;
+  text-align:center;
+  margin-top:50px;
+}
+
+.footer small {
+  color:#ccc;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1 { font-size:28px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">OLM Miathene</div>
+  <div class="links">
+    <a href="#">Home</a>
+    <a href="#">Mass Times</a>
+    <a href="#">Sacraments</a>
+    <a href="#">Homilies</a>
+    <a href="#">About</a>
+    <a href="#" class="give">Give</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="logo.png" alt="Parish Logo">
+  <h1>Our Lady of Mercy Miathene Parish</h1>
+  <div class="sub">Christ-Centred · Inclusive · Self-Sustaining</div>
+
+  <div class="cta">
+    <a href="#" class="btn btn-primary">Mass Times</a>
+    <a href="#" class="btn btn-outline">Watch Homily</a>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<div class="section">
+  <h2>Our Parish Life</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Spiritual Life</h3>
+      <p>Mass, sacraments, and faith formation at the heart of our parish.</p>
+    </div>
+    <div class="card">
+      <h3>Community</h3>
+      <p>Six outstations and vibrant ministries building a strong fellowship.</p>
+    </div>
+    <div class="card">
+      <h3>Give & Build</h3>
+      <p>Support the 2026–2031 vision and help grow our parish mission.</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK INFO -->
+<div class="section">
+  <h2>Quick Access</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Mass Times</h3>
+      <p>Find your nearest outstation and service schedule.</p>
+    </div>
+    <div class="card">
+      <h3>Latest Homily</h3>
+      <p>Watch and reflect on the latest message.</p>
+    </div>
+    <div class="card">
+      <h3>Support the Parish</h3>
+      <p>Give easily via M-Pesa and support parish projects.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTURE -->
+<div class="scripture">
+  “Go therefore and make disciples of all nations.” — Matthew 28:19
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Our Lady of Mercy Miathene Parish</p>
+  <p>Meru County, Kenya · Est. 2026</p>
+  <p>info@olmmiathene.org</p>
+  <small>© 2026 Parish Digital Brand Team</small>
+</div>
+
+</body>
+</html>

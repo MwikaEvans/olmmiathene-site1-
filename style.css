@@ -327,6 +327,62 @@ nav a:hover {
 .mass-card:nth-child(4){ border-top-color: var(--primary); }   /* Mercy Blue */
 .mass-card:nth-child(5){ border-top-color: var(--secondary); }
 .mass-card:nth-child(6){ border-top-color: var(--accent); }
+  /* MASS TIMES CARDS SPECIFIC STYLING */
+.mass-times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Base card for Mass Times (overrides general .card) */
+.mass-card {
+  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* Mercy Blue gradient */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-top: 6px solid var(--primary); /* Mercy Blue default */
+  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Hover effect for all Mass Times cards */
+.mass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-top-color: var(--accent); /* Altar Gold on hover */
+}
+
+/* First card bounce animation */
+.mass-card.main-parish {
+  animation: bounce 2s infinite alternate;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Optional: unique border colors for each outstation */
+.mass-card:nth-child(2) { border-top-color: var(--secondary); } /* Miathene Green */
+.mass-card:nth-child(3) { border-top-color: var(--accent); }    /* Altar Gold */
+.mass-card:nth-child(4) { border-top-color: var(--primary); }   /* Mercy Blue */
+.mass-card:nth-child(5) { border-top-color: var(--secondary); }
+.mass-card:nth-child(6) { border-top-color: var(--accent); }
+
+/* Mobile responsiveness */
+@media(max-width:600px) {
+  .mass-times-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .mass-card {
+    font-size: 14px;
+    padding: 20px;
+  }
+}
 
 /* MOBILE ADJUSTMENTS */
 @media(max-width:600px){

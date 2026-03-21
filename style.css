@@ -411,30 +411,7 @@ nav a:hover {
   }
 }
 }
-/* MASS TIMES CARD STYLES */
-.card-blue { border-top: 5px solid #004A99; }   /* Mercy Blue */
-.card-gold { border-top: 5px solid #FFD700; }   /* Altar Gold */
-.card-green { border-top: 5px solid #2E7D32; }  /* Miathene Green */
 
-.grid .card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.grid .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* Active link highlight */
-nav a.active {
-  border-bottom: 2px solid var(--accent);
-}
-
-/* Emoji hover effect */
-.grid .card h3:hover {
-  transform: scale(1.05);
-  display: inline-block;
-}
 /* MASS TIMES CARDS SPECIFIC STYLING */
 .mass-times-grid {
   display: grid;

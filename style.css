@@ -411,3 +411,44 @@ nav a:hover {
   }
 }
 }
+/* MASS TIMES CARDS SPECIFIC STYLING */
+.mass-times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.mass-card {
+  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* Mercy Blue */
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-top: 6px solid var(--primary); /* Blue top border */
+  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mass-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-top-color: var(--accent); /* Gold on hover */
+}
+
+.mass-card.main-parish {
+  animation: bounce 2s infinite alternate;
+}
+
+/* BOUNCE ANIMATION */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive tweaks for mobile */
+@media(max-width:600px){
+  .mass-times-grid {
+    grid-template-columns: 1fr;
+  }
+}

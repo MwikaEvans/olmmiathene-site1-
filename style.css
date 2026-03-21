@@ -220,4 +220,73 @@ nav .give {
     gap:10px;
     margin-top:10px;
   }
+  /* ===== THEME COLORS ===== */
+:root {
+  --mercy-blue:#004A99;
+  --altar-gold:#FFD700;
+  --miathene-green:#2E7D32;
+}
+
+/* ===== NAV BUTTON HOVER ===== */
+nav a {
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: var(--altar-gold);
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===== HERO BUTTONS ===== */
+.hero .cta .btn {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero .cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== THEMED CARDS ===== */
+.card-spiritual {
+  background: var(--mercy-blue);
+  color: white;
+  border-left: 6px solid var(--altar-gold);
+}
+
+.card-community {
+  background: var(--miathene-green);
+  color: white;
+  border-left: 6px solid var(--altar-gold);
+}
+
+.card-giving {
+  background: var(--altar-gold);
+  color: #000;
+  border-left: 6px solid var(--mercy-blue);
+}
+
+/* ===== QUICK INFO CARD HOVER EFFECT ===== */
+.card:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+/* ===== MOBILE GRID & BUTTONS ===== */
+@media(max-width:600px){
+  .grid {
+    grid-template-columns:1fr;
+  }
+  nav .links {
+    flex-direction: column;
+    gap:10px;
+  }
+  .hero .cta {
+    flex-direction: column;
+    gap:10px;
+  }
+}
 }

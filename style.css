@@ -287,6 +287,58 @@ nav a:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
 }
+  /* MASS TIMES CARDS */
+.mass-times-grid .mass-card {
+  border-top: 5px solid var(--primary); /* Mercy Blue */
+  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* soft blue gradient */
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+  font-size: 15px;
+  padding: 25px;
+}
+
+.mass-times-grid .mass-card h3 {
+  margin-top:0;
+  font-size:18px;
+  color: var(--primary);
+}
+
+.mass-times-grid .mass-card:hover {
+  transform: translateY(-10px) scale(1.02); /* float effect */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  border-top-color: var(--accent); /* Altar Gold on hover */
+}
+
+/* Bounce animation for main parish */
+.mass-times-grid .mass-card:first-child {
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Optional: unique border top colors for each card */
+.mass-card:nth-child(2){ border-top-color: var(--secondary); } /* Miathene Green */
+.mass-card:nth-child(3){ border-top-color: var(--accent); }    /* Altar Gold */
+.mass-card:nth-child(4){ border-top-color: var(--primary); }   /* Mercy Blue */
+.mass-card:nth-child(5){ border-top-color: var(--secondary); }
+.mass-card:nth-child(6){ border-top-color: var(--accent); }
+
+/* MOBILE ADJUSTMENTS */
+@media(max-width:600px){
+  .mass-times-grid {
+    grid-template-columns: 1fr;
+    gap:15px;
+  }
+  .mass-times-grid .mass-card {
+    font-size:14px;
+    padding:20px;
+  }
+}
 
 /* ===== MOBILE GRID & BUTTONS ===== */
 @media(max-width:600px){

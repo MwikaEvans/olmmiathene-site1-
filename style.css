@@ -1,257 +1,125 @@
-/* BRAND COLORS */
+/* ===== BRAND COLORS ===== */
 :root {
-  --primary:#004A99;
-  --secondary:#2E7D32;
-  --accent:#FFD700;
-  --bg:#F0F4F0;
-  --surface:#FFFFFF;
-  --text:#1A1A2E;
-  --muted:#5A5A6A;
+  --primary: #004A99;       /* Mercy Blue */
+  --secondary: #2E7D32;     /* Miathene Green */
+  --accent: #FFD700;         /* Altar Gold */
+  --bg: #F0F4F0;
+  --surface: #FFFFFF;
+  --text: #1A1A2E;
+  --muted: #5A5A6A;
 }
 
-/* RESET */
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin:0;
-  font-family:'Outfit', sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav {
-  background:var(--primary);
-  color:white;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  flex-wrap:wrap;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  flex-wrap: wrap;
 }
 
 nav .logo {
-  font-family:'Cinzel', serif;
-  font-size:18px;
-  font-weight:700;
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 nav .links {
-  display:flex;
-  gap:20px;
-  align-items:center;
-  flex-wrap:wrap;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color:white;
-  text-decoration:none;
-  font-size:14px;
-}
-
-nav a:hover {
-  opacity:0.8;
-}
-
-nav .give {
-  background:var(--accent);
-  color:#000;
-  padding:8px 14px;
-  border-radius:5px;
-  font-weight:500;
-}
-
-/* HERO */
-.hero {
-  background:linear-gradient(rgba(0,74,153,0.85), rgba(0,74,153,0.85)),
-  url('https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=1200');
-  background-size:cover;
-  background-position:center;
-  text-align:center;
-  color:white;
-  padding:80px 20px;
-}
-
-.hero img {
-  width:180px;             
-  max-width:80%;           
-  margin-bottom:25px;      
-  border-radius:12px;      
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  
-  /* FLOAT EFFECT */
-  animation: floatLogo 3s ease-in-out infinite;
-}
-
-/* FLOAT ANIMATION KEYFRAMES */
-@keyframes floatLogo {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }  /* moves up slightly */
-  100% { transform: translateY(0px); }
-}
-
-.hero h1 {
-  font-family:'Cinzel', serif;
-  font-size:40px;
-  margin:10px 0;
-}
-
-.hero .sub {
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-size:20px;
-  margin-bottom:25px;
-}
-
-.hero .cta {
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-/* BUTTONS */
-.btn {
-  padding:12px 20px;
-  border-radius:5px;
-  text-decoration:none;
-  font-weight:500;
-  font-size:14px;
-}
-
-.btn-primary {
-  background:var(--accent);
-  color:#000;
-}
-
-.btn-outline {
-  border:1px solid white;
-  color:white;
-}
-
-/* QUICK INFO BAR */
-.quick-info {
-  background:var(--primary);
-  color:white;
-  text-align:center;
-  padding:10px;
-  font-size:14px;
-}
-
-/* SECTIONS */
-.section {
-  max-width:1000px;
-  margin:50px auto;
-  padding:0 20px;
-}
-
-.section h2 {
-  font-family:'Cinzel', serif;
-  color:var(--primary);
-  margin-bottom:20px;
-}
-
-/* GRID & CARDS */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:20px;
-}
-
-.card {
-  background:var(--surface);
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-.card h3 {
-  margin-top:0;
-  font-size:18px;
-  /* Give Page Card Styling */
-.give .card {
-  border-top: 5px solid var(--primary); /* default blue */
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.give .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* Specific card accents */
-.give .card-mpesa { border-top-color: var(--accent); }       /* Gold */
-.give .card-bank { border-top-color: var(--secondary); }     /* Green */
-.give .card-project { border-top-color: var(--primary); }    /* Blue */
-}
-
-/* SCRIPTURE */
-.scripture {
-  background:var(--primary);
-  color:white;
-  text-align:center;
-  padding:50px 20px;
-  font-family:'EB Garamond', serif;
-  font-style:italic;
-  font-size:22px;
-}
-
-/* FOOTER */
-.footer {
-  background:var(--primary);
-  color:white;
-  padding:30px 20px;
-  text-align:center;
-  margin-top:50px;
-}
-
-.footer a {
-  color:white;
-  text-decoration:none;
-}
-
-.footer a:hover {
-  text-decoration:underline;
-}
-
-.footer small {
-  color:#ccc;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  .hero h1 { font-size:28px; }
-  nav {
-    flex-direction:column;
-    align-items:flex-start;
-  }
-  nav .links {
-    flex-direction:column;
-    gap:10px;
-    margin-top:10px;
-  }
-  /* ===== THEME COLORS ===== */
-:root {
-  --mercy-blue:#004A99;
-  --altar-gold:#FFD700;
-  --miathene-green:#2E7D32;
-}
-
-/* ===== NAV BUTTON HOVER ===== */
-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 
 nav a:hover {
-  background: var(--altar-gold);
+  background: var(--accent);
   color: #000;
   transform: scale(1.05);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-/* ===== HERO BUTTONS ===== */
+nav a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+nav .give {
+  background: var(--accent);
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(rgba(0,74,153,0.85), rgba(0,74,153,0.85)),
+  url('https://images.unsplash.com/photo-1507692049790-de58290a4334?q=80&w=1200');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero img {
+  width: 180px;
+  max-width: 80%;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.hero .sub {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero .cta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
 .hero .cta .btn {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -262,218 +130,139 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* ===== THEMED CARDS ===== */
-.card-spiritual {
-  background: var(--mercy-blue);
-  color: white;
-  border-left: 6px solid var(--altar-gold);
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.card-community {
-  background: var(--miathene-green);
-  color: white;
-  border-left: 6px solid var(--altar-gold);
-}
-
-.card-giving {
-  background: var(--altar-gold);
+.btn-primary {
+  background: var(--accent);
   color: #000;
-  border-left: 6px solid var(--mercy-blue);
 }
 
-/* ===== QUICK INFO CARD HOVER EFFECT ===== */
-.card:hover {
-  transform: translateY(-5px) rotate(-0.5deg);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-  /* MASS TIMES CARDS */
-.mass-times-grid .mass-card {
-  border-top: 5px solid var(--primary); /* Mercy Blue */
-  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* soft blue gradient */
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  text-align: center;
-  font-size: 15px;
-  padding: 25px;
+.btn-outline {
+  border: 1px solid white;
+  color: white;
 }
 
-.mass-times-grid .mass-card h3 {
-  margin-top:0;
-  font-size:18px;
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-family: 'Cinzel', serif;
   color: var(--primary);
+  margin-bottom: 20px;
 }
 
-.mass-times-grid .mass-card:hover {
-  transform: translateY(-10px) scale(1.02); /* float effect */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-  border-top-color: var(--accent); /* Altar Gold on hover */
+/* ===== GRID & CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* Bounce animation for main parish */
-.mass-times-grid .mass-card:first-child {
-  animation: bounce 2s infinite alternate;
+.card {
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@keyframes bounce {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
 }
 
-/* Optional: unique border top colors for each card */
-.mass-card:nth-child(2){ border-top-color: var(--secondary); } /* Miathene Green */
-.mass-card:nth-child(3){ border-top-color: var(--accent); }    /* Altar Gold */
-.mass-card:nth-child(4){ border-top-color: var(--primary); }   /* Mercy Blue */
-.mass-card:nth-child(5){ border-top-color: var(--secondary); }
-.mass-card:nth-child(6){ border-top-color: var(--accent); }
-  /* MASS TIMES CARDS SPECIFIC STYLING */
+.card:hover {
+  transform: translateY(-8px) rotate(-0.5deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Themed cards for sections */
+.card-spiritual { background: var(--primary); color: white; border-left: 6px solid var(--accent); }
+.card-community { background: var(--secondary); color: white; border-left: 6px solid var(--accent); }
+.card-giving { background: var(--accent); color: #000; border-left: 6px solid var(--primary); }
+
+/* ===== MASS TIMES CARDS ===== */
 .mass-times-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Base card for Mass Times (overrides general .card) */
 .mass-card {
-  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* Mercy Blue gradient */
+  background: linear-gradient(145deg, #e6f0ff, #ffffff);
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border-top: 6px solid var(--primary); /* Mercy Blue default */
-  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
+  border-top: 6px solid var(--primary);
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
 }
 
-/* Hover effect for all Mass Times cards */
 .mass-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  border-top-color: var(--accent); /* Altar Gold on hover */
+  border-top-color: var(--accent);
 }
 
-/* First card bounce animation */
 .mass-card.main-parish {
   animation: bounce 2s infinite alternate;
 }
 
-/* Bounce keyframes */
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* Optional: unique border colors for each outstation */
-.mass-card:nth-child(2) { border-top-color: var(--secondary); } /* Miathene Green */
-.mass-card:nth-child(3) { border-top-color: var(--accent); }    /* Altar Gold */
-.mass-card:nth-child(4) { border-top-color: var(--primary); }   /* Mercy Blue */
+.mass-card:nth-child(2) { border-top-color: var(--secondary); }
+.mass-card:nth-child(3) { border-top-color: var(--accent); }
+.mass-card:nth-child(4) { border-top-color: var(--primary); }
 .mass-card:nth-child(5) { border-top-color: var(--secondary); }
 .mass-card:nth-child(6) { border-top-color: var(--accent); }
 
-/* Mobile responsiveness */
-@media(max-width:600px) {
-  .mass-times-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .mass-card {
-    font-size: 14px;
-    padding: 20px;
-  }
-}
-
-/* MOBILE ADJUSTMENTS */
-@media(max-width:600px){
-  .mass-times-grid {
-    grid-template-columns: 1fr;
-    gap:15px;
-  }
-  .mass-times-grid .mass-card {
-    font-size:14px;
-    padding:20px;
-  }
-}
-
-/* ===== MOBILE GRID & BUTTONS ===== */
-@media(max-width:600px){
-  .grid {
-    grid-template-columns:1fr;
-  }
-  nav .links {
-    flex-direction: column;
-    gap:10px;
-  }
-  .hero .cta {
-    flex-direction: column;
-    gap:10px;
-  }
-}
-}
-
-/* MASS TIMES CARDS SPECIFIC STYLING */
-.mass-times-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.mass-card {
-  background: linear-gradient(145deg, #e6f0ff, #ffffff); /* Mercy Blue */
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border-top: 6px solid var(--primary); /* Blue top border */
-  transition: transform 0.3s, box-shadow 0.3s, border-top-color 0.3s;
-  text-align: center;
-  cursor: pointer;
-}
-
-.mass-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  border-top-color: var(--accent); /* Gold on hover */
-}
-
-.mass-card.main-parish {
-  animation: bounce 2s infinite alternate;
-}
-
-/* BOUNCE ANIMATION */
 @keyframes bounce {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
-/* Responsive tweaks for mobile */
+/* ===== SCRIPTURE ===== */
+.scripture {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 22px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer a { color: white; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+.footer small { color: #ccc; }
+
+/* ===== MOBILE RESPONSIVENESS ===== */
 @media(max-width:600px){
-  .mass-times-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* MASS TIMES CARD STYLES */
-.card-blue { border-top: 5px solid #004A99; }   /* Mercy Blue */
-.card-gold { border-top: 5px solid #FFD700; }   /* Altar Gold */
-.card-green { border-top: 5px solid #2E7D32; }  /* Miathene Green */
-
-.grid .card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.grid .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* Active link highlight */
-nav a.active {
-  border-bottom: 2px solid var(--accent);
-}
-
-/* Emoji hover effect */
-.grid .card h3:hover {
-  transform: scale(1.05);
-  display: inline-block;
+  .hero h1 { font-size:28px; }
+  nav { flex-direction: column; align-items: flex-start; }
+  nav .links { flex-direction: column; gap: 10px; margin-top: 10px; }
+  .grid { grid-template-columns: 1fr; }
+  .hero .cta { flex-direction: column; gap: 10px; }
+  .mass-times-grid { grid-template-columns: 1fr; gap: 15px; }
+  .mass-card { font-size: 14px; padding: 20px; }
 }

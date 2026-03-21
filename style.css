@@ -158,6 +158,21 @@ nav .give {
 .card h3 {
   margin-top:0;
   font-size:18px;
+  /* Give Page Card Styling */
+.give .card {
+  border-top: 5px solid var(--primary); /* default blue */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.give .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Specific card accents */
+.give .card-mpesa { border-top-color: var(--accent); }       /* Gold */
+.give .card-bank { border-top-color: var(--secondary); }     /* Green */
+.give .card-project { border-top-color: var(--primary); }    /* Blue */
 }
 
 /* SCRIPTURE */

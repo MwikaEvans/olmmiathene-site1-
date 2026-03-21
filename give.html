@@ -1,43 +1,116 @@
-<div class="section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Give - OLM Miathene</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital@1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Give Page Specific Card Styling */
+.give .grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.give .card {
+  background:var(--surface);
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top:5px solid var(--primary);
+}
+
+.give .card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.give .card-mpesa { border-top-color: var(--accent); }
+.give .card-bank { border-top-color: var(--secondary); }
+.give .card-project { border-top-color: var(--primary); }
+
+.give h3 { margin-top:0; color:var(--primary); }
+.give p { line-height:1.6; }
+
+.give a.cta-link {
+  display:inline-block;
+  margin-top:10px;
+  text-decoration:none;
+  padding:10px 15px;
+  background:var(--accent);
+  color:#000;
+  border-radius:5px;
+  font-weight:500;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">OLM Miathene</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="mass-times.html">Mass Times</a>
+    <a href="sacraments.html">Sacraments</a>
+    <a href="homilies.html">Homilies</a>
+    <a href="about.html">About</a>
+    <a href="give.html" class="give">Give</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="hero">
+  <h1>Support Our Parish</h1>
+  <div class="sub">Your gift helps us grow Christ-centred ministries</div>
+</section>
+
+<!-- GIVE CARDS -->
+<div class="section give">
   <h2>How to Give</h2>
   <div class="grid">
 
     <!-- M-Pesa Card -->
-    <div class="card">
-      <h3>M-Pesa</h3>
-      <p><strong>Paybill:</strong> 123456</p>
-      <p><strong>Account Name:</strong> OLM Miathene Parish</p>
-      <p>Step-by-step:</p>
-      <ul>
-        <li>Go to M-Pesa → Lipa na M-Pesa → Paybill</li>
-        <li>Enter Paybill: 123456</li>
-        <li>Account: Your Name or Purpose</li>
-        <li>Enter Amount & Send</li>
-        <li>Keep your M-Pesa confirmation SMS</li>
-      </ul>
+    <div class="card card-mpesa">
+      <h3>M-Pesa Paybill</h3>
+      <p>Paybill: <strong>123456</strong><br>Account Name: <strong>OLM Miathene Parish</strong></p>
+      <p>Step 1: Open M-Pesa → Paybill → Enter Paybill number and account name.<br>
+      Step 2: Enter amount.<br>
+      Step 3: Confirm payment.</p>
+      <a href="#" class="cta-link">Copy Paybill Info</a>
     </div>
 
     <!-- Bank Transfer Card -->
-    <div class="card">
+    <div class="card card-bank">
       <h3>Bank Transfer</h3>
-      <p><strong>Bank:</strong> Equity Bank</p>
-      <p><strong>Account Name:</strong> OLM Miathene Parish</p>
-      <p><strong>Account Number:</strong> 00123456789</p>
-      <p><strong>Branch:</strong> Meru</p>
-      <p>For larger donations, transfer directly and send confirmation via email: <a href="mailto:info@olmmiathene.org">info@olmmiathene.org</a></p>
+      <p>Bank: <strong>Equity Bank</strong><br>Account Name: <strong>OLM Miathene Parish</strong><br>Account Number: <strong>00123456789</strong></p>
+      <p>For larger donations or cheques, please use bank transfer. Include your name in reference.</p>
+      <a href="#" class="cta-link">Copy Bank Details</a>
     </div>
 
     <!-- Project Giving Card -->
-    <div class="card">
+    <div class="card card-project">
       <h3>Project Giving</h3>
-      <p>You can support specific projects:</p>
-      <ul>
-        <li>Church Building Fund</li>
-        <li>Model Farm</li>
-        <li>Conference Centre</li>
-      </ul>
-      <p>Contact info@olmmiathene.org for guidance on specifying your donation.</p>
+      <p>Support specific parish projects such as:<br>• Model Farm<br>• Conference Centre<br>• Church Building Fund</p>
+      <p>Contact info@olmmiathene.org for dedicated project giving instructions.</p>
+      <a href="contact.html" class="cta-link">Contact Us</a>
     </div>
 
   </div>
 </div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>Our Lady of Mercy Miathene Parish</p>
+  <p>Meru County, Kenya · Est. 2026</p>
+  <p>info@olmmiathene.org</p>
+  <small>© 2026 Parish Digital Brand Team</small>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="footer">
+  <div style="margin-bottom:15px;">
+    <img src="OLM_Logo_Primary.png" alt="Parish Logo" style="width:80px; margin-bottom:5px;">
+    <p>Christ-Centred · Inclusive · Self-Sustaining</p>
+  </div>
+  <div style="margin-bottom:15px;">
+    <a href="mass-times.html" style="color:white; margin-right:10px;">Mass Times</a>
+    <a href="sacraments.html" style="color:white; margin-right:10px;">Sacraments</a>
+    <a href="give.html" style="color:white; margin-right:10px;">Give</a>
+    <a href="contact.html" style="color:white;">Contact</a>
+  </div>
+  <div>
+    <p>Meru County, Kenya · info@olmmiathene.org</p>
+    <small>© 2026 Parish Digital Brand Team</small>
+  </div>
+</div>
